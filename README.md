@@ -3,7 +3,7 @@
 <p align="center"><b>The automatic DJ inside Songate, the music player for the Nintendo Switch: open source.</b><br>
 It listens to every track once, then joins one song into the next the way a DJ would: on the beat, on the drop, on the phrase.<br>
 By <a href="https://github.com/AndryTheBeast"><b>AndryTheBeast</b></a> · Automix V1.2.0 · <a href="LICENSE">MIT licence</a><br>
-<a href="https://github.com/AndryTheBeast/GatefoldNX"><b>🎵 Songate</b></a> · <a href="models"><b>⬇️ The models</b></a></p>
+<a href="https://github.com/AndryTheBeast/Songate"><b>🎵 Songate</b></a> · <a href="models"><b>⬇️ The models</b></a></p>
 
 <p align="center">
 <img src="https://img.shields.io/badge/licence-MIT-8fb3ff" alt="MIT licence">
@@ -257,7 +257,7 @@ The tools: `mixtest --render a b out.wav` (any two files, as Songate plays the j
 
 ## 🤝 Contributing
 
-Issues and pull requests are welcome, above all rated rounds: a round from your own library is the best way to make the next model better. The rules: never change a frozen model (`v1_0_0`, `v1_1_0`, `file1`, a published `.model`); a new model gets a new name and file; a change to the analysis raises `mixan::Version`; check a new model with `mixtrain filesame` and `ctest`. Songate itself lives at [AndryTheBeast/Songate](https://github.com/AndryTheBeast/GatefoldNX): its copy of these files is the source of truth, kept in step with this repository by its `tools/automix/sync-automix.py`, which refuses any change to a frozen model.
+Issues and pull requests are welcome, above all rated rounds: a round from your own library is the best way to make the next model better. The rules: never change a frozen model (`v1_0_0`, `v1_1_0`, `file1`, a published `.model`); a new model gets a new name and file; a change to the analysis raises `mixan::Version`; check a new model with `mixtrain filesame` and `ctest`. Songate itself lives at [AndryTheBeast/Songate](https://github.com/AndryTheBeast/Songate): its copy of these files is the source of truth, kept in step with this repository by its `tools/automix/sync-automix.py`, which refuses any change to a frozen model.
 
 ## 📜 Licence
 
