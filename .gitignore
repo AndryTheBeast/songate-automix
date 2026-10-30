@@ -1,0 +1,5 @@
+build/
+example-tracks/
+*.wav
+*.mp3
+__pycache__/

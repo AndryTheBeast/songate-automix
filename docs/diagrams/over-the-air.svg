@@ -1,0 +1,29 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='780' height='300' viewBox='0 0 780 300' font-family='Inter, Segoe UI, Helvetica, Arial, sans-serif'>
+<rect width='780' height='300' rx='18' fill='#171a22'/>
+<text x='28' y='38' font-size='19' font-weight='700' fill='#eef0f6'>A model's way to the console</text>
+<text x='28' y='62' font-size='12.5' fill='#a7adbd'>A new model that only changes numbers needs no new Songate.</text>
+<rect x='28' y='92' width='196' height='108' rx='12' fill='#0f1117' stroke='#8fb3ff' stroke-opacity='0.55'/>
+<text x='42' y='116' font-size='14' font-weight='700' fill='#eef0f6'>This repository</text>
+<text x='42' y='136' font-size='11.5' fill='#a7adbd'>models/automix-v1.2.0.model</text>
+<text x='42' y='153' font-size='11.5' fill='#a7adbd'>tools/mkmodels.py writes</text>
+<text x='42' y='170' font-size='11.5' fill='#a7adbd'>songate-automix-models.json</text>
+<rect x='292' y='92' width='196' height='108' rx='12' fill='#0f1117' stroke='#8fb3ff' stroke-opacity='0.55'/>
+<text x='306' y='116' font-size='14' font-weight='700' fill='#eef0f6'>A GitHub release</text>
+<text x='306' y='136' font-size='11.5' fill='#a7adbd'>the manifest (name, file, size,</text>
+<text x='306' y='153' font-size='11.5' fill='#a7adbd'>SHA-256, format, lowest</text>
+<text x='306' y='170' font-size='11.5' fill='#a7adbd'>Songate, analysis) and files</text>
+<rect x='556' y='92' width='196' height='108' rx='12' fill='#0f1117' stroke='#c3a2ff' stroke-opacity='0.55'/>
+<text x='570' y='116' font-size='14' font-weight='700' fill='#eef0f6'>Songate</text>
+<text x='570' y='136' font-size='11.5' fill='#a7adbd'>Settings › Updates › Automix</text>
+<text x='570' y='153' font-size='11.5' fill='#a7adbd'>models: checked, downloaded,</text>
+<text x='570' y='170' font-size='11.5' fill='#a7adbd'>its checksum checked</text>
+<line x1='224' y1='146' x2='290' y2='146' stroke='#6c7386' stroke-width='1.6'/>
+<line x1='290' y1='146' x2='282.8' y2='149.5' stroke='#6c7386' stroke-width='1.6'/>
+<line x1='290' y1='146' x2='282.8' y2='142.5' stroke='#6c7386' stroke-width='1.6'/>
+<line x1='488' y1='146' x2='554' y2='146' stroke='#6c7386' stroke-width='1.6'/>
+<line x1='554' y1='146' x2='546.8' y2='149.5' stroke='#6c7386' stroke-width='1.6'/>
+<line x1='554' y1='146' x2='546.8' y2='142.5' stroke='#6c7386' stroke-width='1.6'/>
+<text x='654' y='226' font-size='12' fill='#a7adbd' text-anchor='middle'>config/gatefold-nx/models/</text>
+<text x='654' y='246' font-size='12' fill='#a7adbd' text-anchor='middle'>the app and the background player</text>
+<text x='654' y='266' font-size='12' fill='#a7adbd' text-anchor='middle'>plan with the same file</text>
+</svg>

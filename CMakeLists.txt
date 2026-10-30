@@ -1,0 +1,50 @@
+# songate-automix: the analysis (mixan) and the planner and mixer (automix) of Songate's Automix, as a small C++ library
+# that builds anywhere with a C++20 compiler and nothing else. The examples read and write WAV files only. The training
+# tools (mixtest, mixtrain) decode any format through FFmpeg: -DSONGATE_AUTOMIX_TOOLS=ON -DFFMPEG_DIR=<an FFmpeg build>.
+cmake_minimum_required(VERSION 3.16)
+project(songate_automix VERSION 1.2.0 LANGUAGES CXX)
+
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+if(WIN32)
+  add_compile_definitions(_CRT_SECURE_NO_WARNINGS NOMINMAX _USE_MATH_DEFINES)
+endif()
+
+add_library(songate_automix src/mixan.cpp src/automix.cpp)
+target_include_directories(songate_automix PUBLIC src)
+
+foreach(ex analyse plan_join render_join model_info)
+  add_executable(${ex} examples/${ex}.cpp)
+  target_link_libraries(${ex} PRIVATE songate_automix)
+endforeach()
+
+add_executable(curves tools/curves.cpp)   # the diagrams' numbers (docs/diagrams)
+target_link_libraries(curves PRIVATE songate_automix)
+
+enable_testing()
+add_executable(selftest tests/selftest.cpp)
+target_link_libraries(selftest PRIVATE songate_automix)
+add_test(NAME selftest COMMAND selftest ${CMAKE_CURRENT_SOURCE_DIR}/models)
+
+option(SONGATE_AUTOMIX_TOOLS "Build the training tools (mixtest, mixtrain): they need FFmpeg" OFF)
+if(SONGATE_AUTOMIX_TOOLS)
+  set(FFMPEG_DIR "" CACHE PATH "An FFmpeg build with include/ and lib/ (libavformat, libavcodec, libswresample, libavutil)")
+  if(FFMPEG_DIR)
+    set(FF_INC ${FFMPEG_DIR}/include)
+    set(FF_LIBDIR ${FFMPEG_DIR}/lib)
+  else()
+    find_package(PkgConfig REQUIRED)
+    pkg_check_modules(FF REQUIRED libavformat libavcodec libswresample libavutil)
+    set(FF_INC ${FF_INCLUDE_DIRS})
+    set(FF_LIBDIR ${FF_LIBRARY_DIRS})
+  endif()
+  set(SUPPORT tools/support/ffdecoder.cpp tools/support/loudness.cpp)
+  add_executable(mixtest tools/mixtest.cpp ${SUPPORT})
+  add_executable(mixtrain tools/mixtrain.cpp tools/support/mood.cpp ${SUPPORT})
+  foreach(t mixtest mixtrain)
+    target_compile_definitions(${t} PRIVATE GF_FFMPEG _SILENCE_CXX20_U8PATH_DEPRECATION_WARNING)
+    target_include_directories(${t} PRIVATE tools/support ${FF_INC})
+    target_link_directories(${t} PRIVATE ${FF_LIBDIR})
+    target_link_libraries(${t} PRIVATE songate_automix avformat avcodec swresample avutil)
+  endforeach()
+endif()

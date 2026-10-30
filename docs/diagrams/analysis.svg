@@ -1,0 +1,55 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='780' height='420' viewBox='0 0 780 420' font-family='Inter, Segoe UI, Helvetica, Arial, sans-serif'>
+<rect width='780' height='420' rx='18' fill='#171a22'/>
+<text x='28' y='38' font-size='19' font-weight='700' fill='#eef0f6'>The analysis (mixan)</text>
+<text x='28' y='62' font-size='12.5' fill='#a7adbd'>One pass over the decoded track, in the same decode as the loudness measurement; kept as a line of mix.tsv.</text>
+<rect x='28' y='88' width='160' height='92' rx='12' fill='#0f1117' stroke='#8fb3ff' stroke-opacity='0.55'/>
+<text x='42' y='112' font-size='14' font-weight='700' fill='#eef0f6'>Decode</text>
+<text x='42' y='132' font-size='11.5' fill='#a7adbd'>the track as it is,</text>
+<text x='42' y='149' font-size='11.5' fill='#a7adbd'>mono, cut down to</text>
+<text x='42' y='166' font-size='11.5' fill='#a7adbd'>≈ 11 kHz</text>
+<rect x='220' y='88' width='200' height='92' rx='12' fill='#0f1117' stroke='#8fb3ff' stroke-opacity='0.55'/>
+<text x='234' y='112' font-size='14' font-weight='700' fill='#eef0f6'>Every 128 samples</text>
+<text x='234' y='132' font-size='11.5' fill='#a7adbd'>a 1024-point spectrum:</text>
+<text x='234' y='149' font-size='11.5' fill='#a7adbd'>onset strength (flux),</text>
+<text x='234' y='166' font-size='11.5' fill='#a7adbd'>loudness, bass share</text>
+<rect x='452' y='88' width='300' height='92' rx='12' fill='#0f1117' stroke='#8fb3ff' stroke-opacity='0.55'/>
+<text x='466' y='112' font-size='14' font-weight='700' fill='#eef0f6'>Every 4 hops</text>
+<text x='466' y='132' font-size='11.5' fill='#a7adbd'>the chroma: 12 pitch classes, G♯3–G♯6,</text>
+<text x='466' y='149' font-size='11.5' fill='#a7adbd'>each semitone weighed alike</text>
+<text x='466' y='166' font-size='11.5' fill='#a7adbd'>(and the bass's, 52–208 Hz)</text>
+<line x1='188' y1='134' x2='218' y2='134' stroke='#6c7386' stroke-width='1.6'/>
+<line x1='218' y1='134' x2='210.8' y2='137.5' stroke='#6c7386' stroke-width='1.6'/>
+<line x1='218' y1='134' x2='210.8' y2='130.5' stroke='#6c7386' stroke-width='1.6'/>
+<line x1='420' y1='134' x2='450' y2='134' stroke='#6c7386' stroke-width='1.6'/>
+<line x1='450' y1='134' x2='442.8' y2='137.5' stroke='#6c7386' stroke-width='1.6'/>
+<line x1='450' y1='134' x2='442.8' y2='130.5' stroke='#6c7386' stroke-width='1.6'/>
+<rect x='28' y='214' width='230' height='118' rx='12' fill='#0f1117' stroke='#c3a2ff' stroke-opacity='0.55'/>
+<text x='42' y='238' font-size='14' font-weight='700' fill='#eef0f6'>Tempo and beats</text>
+<text x='42' y='258' font-size='11.5' fill='#a7adbd'>autocorrelation with harmonics,</text>
+<text x='42' y='275' font-size='11.5' fill='#a7adbd'>a prior round 120 BPM; beats by</text>
+<text x='42' y='292' font-size='11.5' fill='#a7adbd'>dynamic programming (Ellis 2007);</text>
+<text x='42' y='309' font-size='11.5' fill='#a7adbd'>a grid at each end</text>
+<rect x='274' y='214' width='230' height='118' rx='12' fill='#0f1117' stroke='#c3a2ff' stroke-opacity='0.55'/>
+<text x='288' y='238' font-size='14' font-weight='700' fill='#eef0f6'>Bars, phrases, drops</text>
+<text x='288' y='258' font-size='11.5' fill='#a7adbd'>downbeats from the bars' accents,</text>
+<text x='288' y='275' font-size='11.5' fill='#a7adbd'>8-bar phrases; each bar's level and</text>
+<text x='288' y='292' font-size='11.5' fill='#a7adbd'>bass (a digit each); the drop where</text>
+<text x='288' y='309' font-size='11.5' fill='#a7adbd'>the bass comes back in full</text>
+<rect x='520' y='214' width='232' height='118' rx='12' fill='#0f1117' stroke='#c3a2ff' stroke-opacity='0.55'/>
+<text x='534' y='238' font-size='14' font-weight='700' fill='#eef0f6'>Key and ends</text>
+<text x='534' y='258' font-size='11.5' fill='#a7adbd'>the best of 24 key profiles</text>
+<text x='534' y='275' font-size='11.5' fill='#a7adbd'>(start, end, whole) → Camelot;</text>
+<text x='534' y='292' font-size='11.5' fill='#a7adbd'>where the music starts, ends,</text>
+<text x='534' y='309' font-size='11.5' fill='#a7adbd'>fades out, how loud the body is</text>
+<line x1='143' y1='182' x2='143' y2='212' stroke='#6c7386' stroke-width='1.6'/>
+<line x1='143' y1='212' x2='139.5' y2='204.8' stroke='#6c7386' stroke-width='1.6'/>
+<line x1='143' y1='212' x2='146.5' y2='204.8' stroke='#6c7386' stroke-width='1.6'/>
+<line x1='389' y1='182' x2='389' y2='212' stroke='#6c7386' stroke-width='1.6'/>
+<line x1='389' y1='212' x2='385.5' y2='204.8' stroke='#6c7386' stroke-width='1.6'/>
+<line x1='389' y1='212' x2='392.5' y2='204.8' stroke='#6c7386' stroke-width='1.6'/>
+<line x1='636' y1='182' x2='636' y2='212' stroke='#6c7386' stroke-width='1.6'/>
+<line x1='636' y1='212' x2='632.5' y2='204.8' stroke='#6c7386' stroke-width='1.6'/>
+<line x1='636' y1='212' x2='639.5' y2='204.8' stroke='#6c7386' stroke-width='1.6'/>
+<rect x='28' y='352' width='724' height='44' rx='10' fill='#0f1117'/>
+<text x='42' y='379' font-size='12' fill='#a7adbd' font-family='Consolas, monospace'>path ⇥ 4,124.000,1.000,0.7324,233.871,… (mixan Version 4: a new analysis raises it)</text>
+</svg>

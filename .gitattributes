@@ -1,0 +1,5 @@
+# Every text file LF, on every system (the sync with Songate compares bytes)
+* text=auto eol=lf
+# A model file is published with its checksum: its bytes never change
+*.model -text
+*.png binary
