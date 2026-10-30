@@ -2,4 +2,5 @@ build/
 example-tracks/
 *.wav
 *.mp3
+!docs/listen/*.mp3
 __pycache__/
